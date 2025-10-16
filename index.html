@@ -3,88 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mutual Camioneros</title>
+<title>Mutual Camioneros de Mendoza</title>
+
+<!-- Meta tags para preview en redes/GitHub -->
+<meta property="og:title" content="Mutual Camioneros de Mendoza">
+<meta property="og:description" content="Verificación de afiliados, comercios y beneficios de la Asociación Mutual Camioneros de Mendoza">
+<meta property="og:image" content="https://i.imgur.com/ZXJvT6b.png">
+<meta property="og:type" content="website">
+
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
   html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Sin scroll */
+    overflow: hidden;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
   }
 
-  /* Logo arriba */
-  .logo-container {
-    flex: 0 0 auto;
+  /* Diseño escritorio */
+  .left, .right { height: 100%; }
+
+  .left {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    background: #e0e0e0;
+    position: relative;
   }
 
-  .logo-container img {
-    width: 85%;
-    max-width: 320px;
+  .left img {
+    width: 90%;
     height: auto;
+    z-index: 1;
   }
 
-  /* Contenido central */
-  .content {
-    flex: 1;
+  .right {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    background: linear-gradient(to left, #003366 80%, rgba(0,51,102,0.85) 100%);
+    color: #fff;
+    padding: 20px;
+    position: relative;
   }
 
-  .content h1 {
-    font-size: 1.5em;
+  .right h1 {
+    font-size: 2em;
     font-weight: bold;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
-  .content button {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+  .right button {
+    background-color: #fff;
+    color: #003366;
+    padding: 18px 28px;
+    font-size: 1.1em;
+    border: none;
     border-radius: 12px;
-    padding: 14px 24px;
-    font-size: 1em;
-    font-weight: bold;
     cursor: pointer;
-    margin: 10px 0;
-    width: 75%;
-    max-width: 260px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    width: 70%;
+    max-width: 250px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-weight: bold;
   }
 
-  .content button:hover {
-    background-color: rgba(255,255,255,0.15);
-    transform: scale(1.05);
+  .right button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
   }
 
-  /* Contactos */
   .contacto {
     display: flex;
-    gap: 18px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    margin-top: 40px;
     font-size: 0.9em;
-    flex-wrap: wrap;
   }
 
   .contacto a {
@@ -109,47 +112,70 @@
     width: 100%;
   }
 
-  /* Footer */
   .footer {
+    position: absolute;
+    bottom: 10px;
     text-align: center;
+    width: 100%;
     font-size: 0.8em;
     color: #ccc;
-    padding-bottom: 10px;
   }
 
-  @media (max-width: 900px) {
-    .content h1 {
-      font-size: 1.3em;
+  /* Diseño móvil: tipo app, degradado */
+  @media(max-width: 900px){
+    html, body { flex-direction: column; }
+
+    .left, .right { width: 100%; height: 50%; }
+
+    /* Fondo degradado gris -> azul */
+    .left { 
+      background: linear-gradient(to bottom, #e0e0e0 60%, #003366 100%);
+      justify-content: flex-start;
+      padding-top: 40px;
     }
 
-    .content button {
-      width: 80%;
-      font-size: 1em;
+    .left img {
+      width: 60%;
     }
+
+    .right {
+      background: #003366;
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
+
+    .right h1 {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .right button { width: 80%; margin-bottom: 15px; }
+
+    .contacto { margin-top: auto; margin-bottom: 15px; gap: 15px; font-size: 0.8em; }
   }
-
 </style>
 </head>
 <body>
 
-  <div class="logo-container">
+  <!-- Diseño escritorio -->
+  <div class="left">
     <img src="https://i.imgur.com/ZXJvT6b.png" alt="Logo Mutual Camioneros">
   </div>
 
-  <div class="content">
+  <div class="right">
     <h1>MUTUAL CAMIONEROS DE MENDOZA</h1>
     <button onclick="window.location.href='verificacion.html'">Verificación de Afiliados</button>
     <button onclick="window.location.href='comercios.html'">Comercios Adheridos</button>
     <button onclick="window.location.href='beneficios.html'">Beneficios</button>
-  </div>
 
-  <div class="contacto">
-    <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
-    <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
-    <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
-  </div>
+    <div class="contacto">
+      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
+      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O/" target="_blank">Canal de difusión</a>
+    </div>
 
-  <div class="footer">2025 © Mutual Camioneros</div>
+    <div class="footer">2025 © Mutual Camioneros</div>
+  </div>
 
 </body>
 </html>
