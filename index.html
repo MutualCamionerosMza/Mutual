@@ -5,87 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mutual Camioneros</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
   html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden; /* Sin scroll */
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
+    align-items: center;
+    justify-content: space-between;
     color: #fff;
-    overflow-x: hidden;
   }
 
-  /* Parte superior: logo */
+  /* Logo arriba */
   .logo-container {
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px 20px 20px;
+    padding-top: 40px;
   }
 
   .logo-container img {
-    width: 80%;
-    max-width: 300px;
+    width: 85%;
+    max-width: 320px;
     height: auto;
   }
 
-  /* Contenido azul (parte inferior) */
+  /* Contenido central */
   .content {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(to bottom, rgba(0,51,102,0.9) 10%, #00224d 100%);
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 40px 20px 80px;
-    margin-top: -30px;
+    text-align: center;
   }
 
   .content h1 {
     font-size: 1.5em;
-    text-align: center;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
-  /* Botones */
   .content button {
-    background-color: #fff;
-    color: #003366;
-    padding: 15px 25px;
-    font-size: 1.1em;
-    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    width: 90%;
-    max-width: 280px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 14px 24px;
+    font-size: 1em;
     font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 75%;
+    max-width: 260px;
+    transition: all 0.3s ease;
   }
 
   .content button:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    background-color: rgba(255,255,255,0.15);
+    transform: scale(1.05);
   }
 
   /* Contactos */
   .contacto {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     justify-content: center;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
     font-size: 0.9em;
+    flex-wrap: wrap;
   }
 
   .contacto a {
@@ -115,8 +114,18 @@
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    padding-bottom: 15px;
-    margin-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 900px) {
+    .content h1 {
+      font-size: 1.3em;
+    }
+
+    .content button {
+      width: 80%;
+      font-size: 1em;
+    }
   }
 
 </style>
@@ -129,19 +138,18 @@
 
   <div class="content">
     <h1>MUTUAL CAMIONEROS DE MENDOZA</h1>
-
     <button onclick="window.location.href='verificacion.html'">Verificación de Afiliados</button>
     <button onclick="window.location.href='comercios.html'">Comercios Adheridos</button>
     <button onclick="window.location.href='beneficios.html'">Beneficios</button>
-
-    <div class="contacto">
-      <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
-      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
-    </div>
-
-    <div class="footer">2025 © Mutual Camioneros</div>
   </div>
+
+  <div class="contacto">
+    <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
+    <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
+    <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+  </div>
+
+  <div class="footer">2025 © Mutual Camioneros</div>
 
 </body>
 </html>
