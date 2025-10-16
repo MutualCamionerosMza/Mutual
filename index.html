@@ -10,73 +10,69 @@
   html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     font-family: 'Arial', sans-serif;
     display: flex;
-    flex-direction: row;
-    background-color: #e0e0e0;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
+    color: #fff;
+    overflow-x: hidden;
   }
 
-  .left, .right { height: 100%; }
-
-  /* Lado izquierdo: gris con logo grande */
-  .left {
-    width: 50%;
+  /* Parte superior: logo */
+  .logo-container {
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: #e0e0e0;
+    padding: 40px 20px 20px 20px;
   }
 
-  .left img {
-    width: 90%;
+  .logo-container img {
+    width: 80%;
+    max-width: 300px;
     height: auto;
-    z-index: 1;
   }
 
-  .left-content { position: relative; z-index: 1; text-align: center; }
-
-  /* Lado derecho: azul opaco con degradado */
-  .right {
-    width: 50%;
+  /* Contenido azul (parte inferior) */
+  .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #003366 80%, rgba(0,51,102,0.85) 100%);
-    color: #fff;
-    position: relative;
-    padding: 20px;
+    justify-content: flex-start;
+    background: linear-gradient(to bottom, rgba(0,51,102,0.9) 10%, #00224d 100%);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 40px 20px 80px;
+    margin-top: -30px;
   }
 
-  .right h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 40px;
+  .content h1 {
+    font-size: 1.5em;
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
-  /* Botones principales */
-  .right button {
+  /* Botones */
+  .content button {
     background-color: #fff;
     color: #003366;
-    padding: 18px 28px;
+    padding: 15px 25px;
     font-size: 1.1em;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.4s ease;
-    width: 70%;
-    max-width: 250px;
+    width: 90%;
+    max-width: 280px;
     margin-bottom: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     font-weight: bold;
   }
 
-  .right button:hover {
+  .content button:hover {
     background-color: #f0f0f0;
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 12px 25px rgba(0,0,0,0.35);
@@ -88,6 +84,7 @@
     gap: 20px;
     justify-content: center;
     margin-top: 40px;
+    flex-wrap: wrap;
     font-size: 0.9em;
   }
 
@@ -115,31 +112,22 @@
 
   /* Footer */
   .footer {
-    position: absolute;
-    bottom: 10px;
     text-align: center;
-    width: 100%;
     font-size: 0.8em;
     color: #ccc;
+    padding-bottom: 15px;
+    margin-top: 40px;
   }
 
-  @media(max-width: 900px){
-    html, body { flex-direction: column; }
-    .left, .right { width: 100%; height: 50%; }
-    .right button { width: 70%; }
-    .contacto { margin-top: 20px; }
-  }
 </style>
 </head>
 <body>
 
-  <div class="left">
-    <div class="left-content">
-      <img src="https://i.imgur.com/ZXJvT6b.png" alt="Logo Mutual Camioneros">
-    </div>
+  <div class="logo-container">
+    <img src="https://i.imgur.com/ZXJvT6b.png" alt="Logo Mutual Camioneros">
   </div>
 
-  <div class="right">
+  <div class="content">
     <h1>MUTUAL CAMIONEROS DE MENDOZA</h1>
 
     <button onclick="window.location.href='verificacion.html'">Verificación de Afiliados</button>
@@ -147,14 +135,13 @@
     <button onclick="window.location.href='beneficios.html'">Beneficios</button>
 
     <div class="contacto">
-      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
+      <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
       <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
-      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal de difusión</a>
+      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
     </div>
 
-    <div class="footer">2025 © Mutual Camioneros de Mendoza</div>
+    <div class="footer">2025 © Mutual Camioneros</div>
   </div>
 
 </body>
 </html>
-
