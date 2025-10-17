@@ -128,7 +128,7 @@
     min-height: 100vh; /* permite scroll si hace falta */
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
-    overflow-y: auto; /* activa scroll solo si es necesario */
+    overflow-y: auto; 
     justify-content: flex-start;
     align-items: center;
   }
@@ -138,12 +138,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   .mobile .logo-container img {
-    width: 85%;
-    max-width: 320px;
+    width: 70%;
+    max-width: 250px;
     height: auto;
   }
 
@@ -158,9 +158,9 @@
   }
 
   .mobile .content h1 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   }
 
@@ -169,7 +169,7 @@
     color: #ffffff;
     border: 2px solid #ffffff;
     border-radius: 12px;
-    padding: 14px 24px;
+    padding: 12px 24px;
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
@@ -184,6 +184,7 @@
     transform: scale(1.05);
   }
 
+  /* contacto debajo de botones, footer al final */
   .mobile .bottom {
     width: 100%;
     display: flex;
@@ -194,39 +195,19 @@
 
   .mobile .contacto {
     display: flex;
-    gap: 18px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
-    margin: 25px 0 10px 0;
+    margin: 20px 0 10px 0;
     font-size: 0.9em;
     flex-wrap: wrap;
   }
-
-  .mobile .contacto a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-
-  .mobile .contacto a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    left: 0;
-    bottom: -2px;
-    transition: width 0.3s ease;
-  }
-
-  .mobile .contacto a:hover::after { width: 100%; }
 
   .mobile .footer {
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   /* ================== MEDIA QUERIES ================== */
