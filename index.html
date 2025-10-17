@@ -9,7 +9,7 @@
 
   html, body {
     width: 100%;
-    height: 100dvh; /* ✅ Solución para iPhone (ajusta al alto visible real) */
+    height: 100dvh; /* ✅ alto visible dinámico compatible con iPhone */
     overflow: hidden;
   }
 
@@ -29,18 +29,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
     background: #e0e0e0;
   }
 
   .left img {
     width: 90%;
     height: auto;
-    z-index: 1;
   }
-
-  .left-content { position: relative; z-index: 1; text-align: center; }
 
   .right {
     width: 50%;
@@ -126,24 +121,22 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    height: 100dvh; /* ✅ También acá: altura dinámica compatible con iPhone */
+    height: 100dvh;
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .mobile .logo-container {
-    flex: 0 0 auto;
+    padding-top: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-top: 40px;
   }
 
   .mobile .logo-container img {
     width: 90%;
-    max-width: 360px; /* ✅ un poco más grande */
+    max-width: 360px;
     height: auto;
   }
 
@@ -183,12 +176,21 @@
     transform: scale(1.05);
   }
 
+  /* ✅ Bloque de contacto centrado y footer debajo */
+  .mobile .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
   .mobile .contacto {
     display: flex;
     gap: 18px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 0.9em;
     flex-wrap: wrap;
   }
@@ -217,7 +219,6 @@
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    padding-bottom: 10px;
   }
 
   /* ================== MEDIA QUERIES ================== */
@@ -232,9 +233,7 @@
   <!-- Escritorio -->
   <div class="desktop">
     <div class="left">
-      <div class="left-content">
-        <img src="https://i.imgur.com/ZXJvT6b.png" alt="Logo Mutual Camioneros">
-      </div>
+      <img src="https://i.imgur.com/ZXJvT6b.png" alt="Logo Mutual Camioneros">
     </div>
 
     <div class="right">
@@ -266,13 +265,15 @@
       <button onclick="window.location.href='beneficios.html'">Beneficios</button>
     </div>
 
-    <div class="contacto">
-      <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
-      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+    <!-- ✅ Nuevo bloque inferior con contacto y footer -->
+    <div class="bottom">
+      <div class="contacto">
+        <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
+        <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+      </div>
+      <div class="footer">2025 © Mutual Camioneros</div>
     </div>
-
-    <div class="footer">2025 © Mutual Camioneros</div>
   </div>
 
 </body>
