@@ -129,9 +129,11 @@
     height: 100%;
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
-    overflow: hidden;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .mobile .logo-container {
@@ -143,8 +145,8 @@
   }
 
   .mobile .logo-container img {
-    width: 85%;
-    max-width: 320px;
+    width: 95%;
+    max-width: 350px;
     height: auto;
   }
 
@@ -155,10 +157,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .mobile .content h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 35px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -170,7 +173,7 @@
     border: 2px solid #ffffff;
     border-radius: 12px;
     padding: 14px 24px;
-    font-size: 1em;
+    font-size: 1.05em;
     font-weight: bold;
     cursor: pointer;
     margin: 10px 0;
@@ -189,7 +192,7 @@
     gap: 18px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 0.9em;
     flex-wrap: wrap;
   }
@@ -218,8 +221,7 @@
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   /* ================== MEDIA QUERIES ================== */
