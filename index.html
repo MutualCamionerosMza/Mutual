@@ -7,7 +7,10 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
 
-  html, body { width: 100%; height: 100%; }
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
 
   /* ================== ESCRITORIO ================== */
   .desktop {
@@ -80,7 +83,7 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.35);
   }
 
-  .right .contacto {
+  .contacto {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -88,14 +91,14 @@
     font-size: 0.9em;
   }
 
-  .right .contacto a {
+  .contacto a {
     text-decoration: none;
     color: #fff;
     position: relative;
     transition: all 0.3s ease;
   }
 
-  .right .contacto a::after {
+  .contacto a::after {
     content: "";
     position: absolute;
     width: 0;
@@ -106,9 +109,9 @@
     transition: width 0.3s ease;
   }
 
-  .right .contacto a:hover::after { width: 100%; }
+  .contacto a:hover::after { width: 100%; }
 
-  .right .footer {
+  .footer {
     position: absolute;
     bottom: 10px;
     text-align: center;
@@ -139,8 +142,8 @@
   }
 
   .mobile .logo-container img {
-    width: 95%;
-    max-width: 360px;
+    width: 85%;
+    max-width: 320px;
     height: auto;
   }
 
@@ -223,11 +226,9 @@
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    padding-bottom: calc(10px + env(safe-area-inset-bottom));
     margin-bottom: 10px;
   }
 
-  /* ================== MEDIA QUERIES ================== */
   @media (max-width: 900px){
     .desktop { display: none; }
     .mobile { display: flex; }
@@ -249,13 +250,6 @@
       <button onclick="window.location.href='verificacion.html'">Verificación de Afiliados</button>
       <button onclick="window.location.href='comercios.html'">Comercios Adheridos</button>
       <button onclick="window.location.href='beneficios.html'">Beneficios</button>
-      <button onclick="window.location.href='contacto.html'">Contacto</button>
-
-      <div class="contacto">
-        <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/mutualcamionerosmendoza?igsh=ajBrY29xZ29wNTA0" target="_blank">Instagram</a>
-        <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal de difusión</a>
-      </div>
 
       <div class="footer">2025 © Mutual Camioneros de Mendoza</div>
     </div>
@@ -272,7 +266,6 @@
       <button onclick="window.location.href='verificacion.html'">Verificación de Afiliados</button>
       <button onclick="window.location.href='comercios.html'">Comercios Adheridos</button>
       <button onclick="window.location.href='beneficios.html'">Beneficios</button>
-      <button onclick="window.location.href='contacto.html'">Contacto</button>
     </div>
 
     <div class="bottom">
@@ -281,9 +274,7 @@
         <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
         <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
       </div>
-      <div class="footer">
-        2025 © Mutual Camioneros
-      </div>
+      <div class="footer">2025 © Mutual Camioneros</div>
     </div>
   </div>
 
