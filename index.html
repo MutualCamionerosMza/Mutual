@@ -125,7 +125,7 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    min-height: 100dvh; /* clave para iPhone */
+    min-height: 100dvh;
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
     justify-content: flex-start;
@@ -150,7 +150,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     padding: 20px 0;
@@ -183,21 +183,23 @@
     transform: scale(1.05);
   }
 
+  /* contacto centrado entre botones y footer */
   .mobile .bottom {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 15px;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 40px 0 20px 0;
   }
 
-  /* contacto primero, footer después */
   .mobile .contacto {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
-    margin: 10px 0 20px 0;
+    margin-bottom: 25px;
     font-size: 0.9em;
     flex-wrap: wrap;
   }
@@ -206,7 +208,6 @@
     text-align: center;
     font-size: 0.8em;
     color: #ccc;
-    margin-bottom: 10px;
   }
 
   /* ================== MEDIA QUERIES ================== */
