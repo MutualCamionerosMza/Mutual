@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - Mutual Camioneros</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Escritorio */
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
+    color: #fff;
+  }
+
+  .desktop h1 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+  }
+
+  .links a:hover::after { width: 100%; }
+
+  .footer {
+    font-size: 0.8em;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Móvil */
+  .mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
+    color: #fff;
+    overflow-y: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .mobile h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .mobile .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .mobile .links a {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+
+  .mobile .links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+  }
+
+  .mobile .links a:hover::after { width: 100%; }
+
+  .mobile .footer {
+    font-size: 0.8em;
+    color: #ccc;
+    text-align: center;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 900px){
+    .desktop { display: none; }
+    .mobile { display: flex; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Escritorio -->
+  <div class="desktop">
+    <h1>Contacto - Mutual Camioneros</h1>
+    <div class="links">
+      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
+      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+    </div>
+    <div class="footer">2025 © Mutual Camioneros</div>
+  </div>
+
+  <!-- Móvil -->
+  <div class="mobile">
+    <h1>Contacto - Mutual Camioneros</h1>
+    <div class="links">
+      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
+      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+    </div>
+    <div class="footer">2025 © Mutual Camioneros</div>
+  </div>
+
+</body>
+</html>
