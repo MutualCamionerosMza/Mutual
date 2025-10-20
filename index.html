@@ -125,10 +125,9 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100dvh; /* clave para iPhone */
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
-    overflow-y: auto; 
     justify-content: flex-start;
     align-items: center;
   }
@@ -141,7 +140,6 @@
     padding-top: 30px;
   }
 
-  /* Logo más grande para móvil */
   .mobile .logo-container img {
     width: 90%;
     max-width: 350px;
@@ -185,7 +183,6 @@
     transform: scale(1.05);
   }
 
-  /* contacto + footer ordenados correctamente */
   .mobile .bottom {
     width: 100%;
     display: flex;
@@ -194,13 +191,7 @@
     margin-bottom: 15px;
   }
 
-  .mobile .footer {
-    text-align: center;
-    font-size: 0.8em;
-    color: #ccc;
-    margin-bottom: 10px;
-  }
-
+  /* contacto primero, footer después */
   .mobile .contacto {
     display: flex;
     gap: 15px;
@@ -209,6 +200,13 @@
     margin: 10px 0 20px 0;
     font-size: 0.9em;
     flex-wrap: wrap;
+  }
+
+  .mobile .footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #ccc;
+    margin-bottom: 10px;
   }
 
   /* ================== MEDIA QUERIES ================== */
