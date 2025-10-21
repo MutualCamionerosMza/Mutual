@@ -10,152 +10,94 @@
   html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-  }
-
-  /* Escritorio */
-  .desktop {
+    background: linear-gradient(to bottom, #003366 0%, #001f4d 100%);
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
-    color: #fff;
+    justify-content: center;
+    text-align: center;
   }
 
-  .desktop h1 {
+  h1 {
     font-size: 2em;
     margin-bottom: 40px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    text-align: center;
   }
 
-  .links {
+  .contactos {
     display: flex;
-    gap: 30px;
     justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
+    gap: 40px;
   }
 
-  .links a {
-    text-decoration: none;
-    color: #fff;
+  .contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.2em;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .contacto a {
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    position: relative;
+    transition: color 0.3s ease;
   }
 
-  .links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
+  .contacto:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
   }
 
-  .links a:hover::after { width: 100%; }
+  .contacto a:hover {
+    color: #d9d9d9;
+  }
 
   .footer {
-    font-size: 0.8em;
-    color: #ccc;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  /* Móvil */
-  .mobile {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
-    color: #fff;
-    overflow-y: auto;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 40px;
-  }
-
-  .mobile h1 {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 35px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    text-align: center;
-  }
-
-  .mobile .links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-  .mobile .links a {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-  }
-
-  .mobile .links a::after {
-    content: "";
     position: absolute;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    left: 0;
-    bottom: -4px;
-    transition: width 0.3s ease;
-  }
-
-  .mobile .links a:hover::after { width: 100%; }
-
-  .mobile .footer {
-    font-size: 0.8em;
+    bottom: 15px;
+    font-size: 0.9em;
     color: #ccc;
-    text-align: center;
-    padding-bottom: calc(10px + env(safe-area-inset-bottom));
-    margin-bottom: 10px;
   }
 
-  @media (max-width: 900px){
-    .desktop { display: none; }
-    .mobile { display: flex; }
+  /* ========== Versión móvil ========== */
+  @media (max-width: 900px) {
+    h1 { font-size: 1.6em; margin-bottom: 25px; }
+
+    .contactos {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .contacto {
+      font-size: 1.3em;
+    }
   }
 </style>
 </head>
 <body>
 
-  <!-- Escritorio -->
-  <div class="desktop">
-    <h1>Contacto - Mutual Camioneros</h1>
-    <div class="links">
-      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
-      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
+  <h1>CONTACTO</h1>
+
+  <div class="contactos">
+    <div class="contacto">
+      <span>💬</span>
+      <a href="https://wa.link/uzcd3z" target="_blank">WhatsApp</a>
     </div>
-    
+    <div class="contacto">
+      <span>📸</span>
+      <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
+    </div>
+    <div class="contacto">
+      <span>📢</span>
+      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal de difusión</a>
+    </div>
   </div>
 
-  <!-- Móvil -->
-  <div class="mobile">
-    <h1>Contacto - Mutual Camioneros</h1>
-    <div class="links">
-      <a href="https://wa.link/uzcd3z/" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/mutualcamionerosmendoza" target="_blank">Instagram</a>
-      <a href="https://whatsapp.com/channel/0029Vb5wvOV05MUhwokb7z3O" target="_blank">Canal</a>
-    </div>
-  
-  </div>
+  <div class="footer">2025 © Mutual Camioneros de Mendoza</div>
 
 </body>
 </html>
