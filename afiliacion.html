@@ -3,163 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiero afiliarme - Mutual Camioneros</title>
+<title>Quiero Afiliarme – Mutual Camioneros</title>
 
 <style>
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100vh;
   }
 
   body {
-    min-height: 100vh;
     background: linear-gradient(to bottom, #d9d9d9 0%, #003366 100%);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
   }
 
   .container {
-    max-width: 500px;
     width: 100%;
-    background: rgba(0,0,0,0.15);
-    border-radius: 16px;
-    padding: 28px 24px;
-    backdrop-filter: blur(4px);
+    max-width: 900px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 25px;
+  }
+
+  .logo img {
+    width: 280px;
+    max-width: 90%;
   }
 
   h1 {
-    text-align: center;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   h2 {
-    text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: normal;
-    margin-bottom: 25px;
-    opacity: 0.9;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.95;
   }
 
-  .section {
-    margin-bottom: 22px;
-  }
-
-  .section-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  ul li {
-    margin-bottom: 8px;
-  }
-
-  .note {
-    font-size: 0.9em;
-    opacity: 0.85;
-    margin-top: 8px;
-    line-height: 1.4;
-  }
-
-  .process p {
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-
-  .wp-button {
-    display: block;
+  .box {
+    background: rgba(0,0,0,0.15);
+    border-radius: 14px;
+    padding: 25px;
     width: 100%;
-    margin-top: 25px;
-    padding: 14px;
-    background-color: #fff;
+    max-width: 700px;
+  }
+
+  .box p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 0.95em;
+  }
+
+  .box ul {
+    margin: 15px 0 20px 20px;
+    font-size: 0.95em;
+  }
+
+  .box li {
+    margin-bottom: 10px;
+  }
+
+  .steps {
+    margin-top: 20px;
+  }
+
+  .steps p {
+    margin-bottom: 12px;
+  }
+
+  .cta {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta a {
+    text-decoration: none;
+    background: #fff;
     color: #003366;
-    border: none;
+    padding: 16px 26px;
     border-radius: 12px;
-    font-size: 1em;
     font-weight: bold;
-    cursor: pointer;
+    font-size: 1em;
     transition: all 0.3s ease;
   }
 
-  .wp-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.03);
+  .cta a:hover {
+    transform: scale(1.05);
+    background: #f2f2f2;
   }
 
   .footer {
-    text-align: center;
+    margin-top: 30px;
     font-size: 0.8em;
-    margin-top: 18px;
-    opacity: 0.7;
+    color: #e0e0e0;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .box {
+      padding: 20px;
+    }
   }
 </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h1>🧾 QUIERO AFILIARME</h1>
-    <h2>Asociación Mutual Camioneros de Mendoza</h2>
+  <div class="logo">
+    <img src="https://i.imgur.com/ZXJvT6b.png" alt="Mutual Camioneros">
+  </div>
 
-    <div class="section">
-      <div class="section-title">✅ Antigüedad mínima</div>
-      <p>Tener <strong>8 meses de antigüedad laboral</strong>.</p>
-    </div>
+  <h1>🧾 QUIERO AFILIARME</h1>
+  <h2>Asociación Mutual Camioneros de Mendoza</h2>
 
-    <div class="section">
-      <div class="section-title">📄 Documentación requerida</div>
-      <ul>
-        <li>• DNI (frente y dorso)</li>
-        <li>• Últimos <strong>3 bonos de sueldo</strong></li>
-        <li>• <strong>Un impuesto</strong> (luz, gas, agua o similar)</li>
-      </ul>
+  <div class="box">
 
-      <p class="note">
-        📌 <strong>Autorizado:</strong><br>
-        En caso de querer dejar una persona autorizada para utilizar la mutual,
-        también se deberá presentar <strong>DNI del autorizado</strong>.
-      </p>
+    <p><strong>Requisitos para iniciar la afiliación</strong></p>
 
-      <p class="note">
-        (Fotocopias o fotos legibles)
-      </p>
-    </div>
+    <p>Para comenzar el trámite de afiliación, es necesario cumplir con los siguientes requisitos y enviar la documentación correspondiente:</p>
 
-    <div class="section process">
-      <div class="section-title">¿Cómo es el proceso?</div>
+    <p><strong>✅ Antigüedad mínima</strong><br>
+    Tener al menos <strong>8 meses de antigüedad laboral</strong>.</p>
 
-      <p>📲 <strong>Envío de documentación</strong><br>
+    <p><strong>📄 Documentación requerida</strong> (fotocopias o fotos legibles):</p>
+
+    <ul>
+      <li>DNI (frente y dorso)</li>
+      <li>Últimos 3 bonos de sueldo</li>
+      <li>Un impuesto (luz, gas, agua o similar)</li>
+      <li>En caso de designar un autorizado para usar la mutual, DNI del autorizado</li>
+    </ul>
+
+    <div class="steps">
+      <p><strong>📲 Envío de documentación</strong><br>
       Toda la documentación puede enviarse de manera digital a través de WhatsApp.</p>
 
-      <p>🕒 <strong>Revisión y carga administrativa</strong><br>
+      <p><strong>🕒 Revisión y carga administrativa</strong><br>
       Nuestro equipo revisará la información y realizará el proceso de alta.</p>
 
-      <p>✍️ <strong>Firma presencial</strong><br>
-      Una vez que el alta esté lista, nos vamos a comunicar para coordinar el día y horario
-      en el que debas acercarte a firmar el alta.</p>
+      <p><strong>✍️ Firma presencial</strong><br>
+      Una vez que el alta esté lista, nos vamos a comunicar para coordinar el día y horario en el que debas acercarte a firmar el alta.</p>
     </div>
 
-    <button class="wp-button"
-      onclick="window.open('https://wa.link/uzcd3z', '_blank')">
-      📲 Enviar documentación
-    </button>
-
-    <div class="footer">
-      2025 © Mutual Camioneros de Mendoza
+    <div class="cta">
+      <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20👋%0A%0AQuiero%20iniciar%20el%20trámite%20de%20afiliación%20a%20la%20Asociación%20Mutual%20Camioneros%20de%20Mendoza.%0A%0A✅%20Confirmo%20que%20tengo%20al%20menos%208%20meses%20de%20antigüedad%20laboral.%0A%0A📄%20Adjunto%20la%20siguiente%20documentación:%0A-%20DNI%20(frente%20y%20dorso)%0A-%20Últimos%203%20bonos%20de%20sueldo%0A-%20Un%20impuesto%20(luz,%20gas,%20agua%20o%20similar)%0A-%20DNI%20del%20autorizado%20(en%20caso%20de%20corresponder)%0A%0A👤%20Autorizado%20a%20usar%20la%20mutual:%20SI%20/%20NO%0A%0AQuedo%20a%20disposición.%20Muchas%20gracias."
+         target="_blank">
+        Enviar documentación
+      </a>
     </div>
 
   </div>
+
+  <div class="footer">
+    2025 © Mutual Camioneros de Mendoza
+  </div>
+
+</div>
 
 </body>
 </html>
